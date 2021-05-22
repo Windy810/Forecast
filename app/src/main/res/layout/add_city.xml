@@ -45,25 +45,57 @@
         android:orientation="vertical"
         android:layout_margin="20dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="470dp">
         <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:id="@+id/autoCompleteTextView"
             android:textColor="#ffffff"
-            android:completionThreshold="2"
+            android:completionThreshold="1"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:background="@drawable/app_list_corner_round"/>
-        <Button
-            android:id="@+id/btn_add"
-            android:text="添加"
-            android:textColor="#ffffff"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/app_list_corner_round"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:drawableRight="@drawable/search"
+            android:singleLine="true"
+            android:background="@drawable/app_list_corner_circle"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="470dp">
+            <LinearLayout
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="470dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="470dp">
+
+                    <ListView
+                        android:id="@+id/list_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="420dp"
+                        android:dividerHeight="8dp"></ListView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/app_list_corner_round"
+        android:text="添加"
+        android:textColor="#ffffff" />
 </LinearLayout>

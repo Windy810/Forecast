@@ -2,15 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="80dp"
     android:background="@drawable/app_list_corner_round"
-    android:minHeight="50dp">
+    android:minHeight="80dp">
 
     <TextView
         android:id="@+id/cityName"
-        android:layout_width="74dp"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="3"
         android:gravity="center"
         android:textColor="#ffffff" />
     <TextView
@@ -24,7 +24,7 @@
         android:id="@+id/citySet"
         android:textColor="#ffffff"
         android:gravity="center"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:layout_width="0dp"
         android:layout_height="match_parent" />
 </LinearLayout>

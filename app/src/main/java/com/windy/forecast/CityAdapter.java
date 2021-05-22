@@ -53,7 +53,7 @@ public class CityAdapter extends BaseAdapter{
                     notifyDataSetChanged();
                 }
             });
-            viewHolder.cityDelete.setText("点击删除");
+            viewHolder.cityDelete.setText("删除");
             viewHolder.cityDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
