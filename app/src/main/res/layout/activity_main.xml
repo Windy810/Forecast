@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bgpic4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:background="#104E8B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="多天预报"
+                android:layout_gravity="center"
+                android:id="@+id/textView"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/text_while"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#FFFFFFFF" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <RadioGroup
+        android:id="@+id/rg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb0"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/forecast"
+            android:text="预报" />
+
+        <RadioButton
+            android:id="@+id/rb1"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/detail"
+            android:text="详情" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/city"
+            android:text="城市" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/rg_tab_bar"
+        android:background="@color/div_white" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bar" />
+</RelativeLayout>
