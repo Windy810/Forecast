@@ -86,8 +86,8 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
         day4 = view.findViewById(R.id.day4);
         day5 = view.findViewById(R.id.day5);
         day6 = view.findViewById(R.id.day6);
-//        date0 = view.findViewById(R.id.date0);
-//        date1 = view.findViewById(R.id.date1);
+        date0 = view.findViewById(R.id.date0);
+        date1 = view.findViewById(R.id.date1);
         date2 = view.findViewById(R.id.date2);
         date3 = view.findViewById(R.id.date3);
         date4 = view.findViewById(R.id.date4);
@@ -164,11 +164,11 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
             Date d;
             String string_date0 = weeklyWeatherForecast.getHeWeather6().get(0).getDaily_forecast().get(0).getDate();
             d = std1.parse(string_date0);
-//            date0.setText(std3.format(d));
+            date0.setText(std3.format(d));
             day0.setText("今天");
             String string_date1 = weeklyWeatherForecast.getHeWeather6().get(0).getDaily_forecast().get(1).getDate();
             d = std1.parse(string_date1);
-//            date1.setText(std3.format(d));
+            date1.setText(std3.format(d));
             day1.setText("明天");
             String string_date2 = weeklyWeatherForecast.getHeWeather6().get(0).getDaily_forecast().get(2).getDate();
             d = std1.parse(string_date2);

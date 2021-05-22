@@ -22,7 +22,7 @@
                     android:id="@+id/add_city"
                     android:layout_marginLeft="15dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:drawableStart="@drawable/add"
                     android:textColor="#ffffff"
@@ -33,14 +33,14 @@
                     android:textSize="24sp"
                     android:textColor="#ffffff"
                     android:gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
                 <TextView
                     android:id="@+id/citySet"
                     android:textColor="#ffffff"
                     android:gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
             </LinearLayout>
@@ -68,33 +68,33 @@
                     android:text="周五"
                     android:textSize="20sp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:textColor="#ffffff"
-                    android:layout_width="3dp" />
+                    android:layout_width="0dp" />
                 <TextView
                     android:id="@+id/date0"
                     android:text="5/22"
                     android:textSize="20sp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:textColor="#ffffff"
-                    android:layout_width="3dp" />
+                    android:layout_width="0dp" />
                 <ImageView
                     android:id="@+id/img_d0"
                     android:textSize="20sp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
-                    android:layout_width="3dp" />
+                    android:layout_width="0dp" />
                 <TextView
                     android:id="@+id/cond_txt_d0"
                     android:text="大雨"
                     android:textSize="20sp"
                     android:textColor="#ffffff"
                     android:gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
                 <TextView
@@ -103,7 +103,7 @@
                     android:textSize="20sp"
                     android:textColor="#ffffff"
                     android:gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
                 <TextView
@@ -121,7 +121,7 @@
                     android:textSize="20sp"
                     android:textColor="#ffffff"
                     android:gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
             </LinearLayout>
@@ -135,33 +135,33 @@
                     android:text="周五"
                     android:textSize="20sp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:textColor="#ffffff"
-                    android:layout_width="3dp" />
+                    android:layout_width="0dp" />
                 <TextView
                     android:id="@+id/date1"
                     android:text="5/22"
                     android:textSize="20sp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:textColor="#ffffff"
-                    android:layout_width="3dp" />
+                    android:layout_width="0dp" />
                 <ImageView
                     android:id="@+id/img_d1"
                     android:textSize="20sp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
-                    android:layout_width="3dp" />
+                    android:layout_width="0dp" />
                 <TextView
                     android:id="@+id/cond_txt_d1"
                     android:text="大雨"
                     android:textSize="20sp"
                     android:textColor="#ffffff"
                     android:gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
                 <TextView
@@ -170,7 +170,7 @@
                     android:textSize="20sp"
                     android:textColor="#ffffff"
                     android:gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
                 <TextView
@@ -188,7 +188,7 @@
                     android:textSize="20sp"
                     android:textColor="#ffffff"
                     android:gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
             </LinearLayout>
