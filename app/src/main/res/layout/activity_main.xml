@@ -38,7 +38,7 @@
     <RadioGroup
         android:id="@+id/rg_tab_bar"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:background="@color/bg_white"
         android:orientation="horizontal">
@@ -47,19 +47,25 @@
             android:id="@+id/rb0"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/forecast"
-            android:text="预报" />
+            android:text="预报"
+            android:textSize="10sp"
+            android:background="@color/color_radiobutton"/>
 
         <RadioButton
             android:id="@+id/rb1"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/detail"
-            android:text="详情" />
+            android:text="详情"
+            android:textSize="10sp"
+            android:background="@color/color_radiobutton"/>
 
         <RadioButton
             android:id="@+id/rb2"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/city"
-            android:text="城市" />
+            android:text="城市"
+            android:textSize="10sp"
+            android:background="@color/color_radiobutton"/>
 
     </RadioGroup>
 
