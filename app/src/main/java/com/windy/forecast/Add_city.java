@@ -11,7 +11,6 @@ import android.widget.Button;
 
 public class Add_city extends AppCompatActivity implements View.OnClickListener{
     private Button btn_add;
-    private Button btn_back;
     private AutoCompleteTextView autoCompleteTextView;
 
     @Override
@@ -34,24 +33,16 @@ public class Add_city extends AppCompatActivity implements View.OnClickListener{
         autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
         btn_add = findViewById(R.id.btn_add);
         btn_add.setOnClickListener(this);
-        btn_back = findViewById(R.id.btn_back);
-        btn_back.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn_add:
-                Intent intent = new Intent();
-                String string_city = autoCompleteTextView.getText().toString();
-                intent.putExtra("cityName",string_city);
-                setResult(1,intent);
-                finish();
-                break;
-            case R.id.btn_back:
-                finish();
-                break;
-            default:
+        if (v.getId() == R.id.btn_add) {
+            Intent intent = new Intent();
+            String string_city = autoCompleteTextView.getText().toString();
+            intent.putExtra("cityName", string_city);
+            setResult(1, intent);
+            finish();
         }
     }
 }

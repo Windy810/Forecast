@@ -40,19 +40,13 @@ public class Fragment3 extends Fragment implements View.OnClickListener{
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (resultCode) {
-            case 1:
-                String string_city = data.getStringExtra("cityName");
-                if(nameExistInList(string_city)){
-                    break;
-                }
-                else if(!nameExistInList(string_city)){
-                    updateCurrentCity(string_city);
-                    draw();
-                }
-                break;
-            default:
-                break;
+        if (resultCode == 1) {
+            String string_city = data.getStringExtra("cityName");
+            if (nameExistInList(string_city)) {
+            } else if (!nameExistInList(string_city)) {
+                updateCurrentCity(string_city);
+                draw();
+            }
         }
 
     }
@@ -110,11 +104,13 @@ public class Fragment3 extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         if (v.getId() == R.id.btn_add) {
             Intent intent = new Intent();
+            //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    //注意点1
+            //TODO 传入这个界面数据请求到的ID
             String string_city = autoCompleteTextView.getText().toString();
             intent.putExtra("cityName", string_city);
-            fck = new android.app.Activity();
-            fck.setResult(1, intent);
-            fck.finish();
+            intent.setClass(getActivity(), Add_city.class);
+            //getActivity().startActivityForResult(intent, REQUEST_CODE);  //注意点2
+            startActivityForResult(intent, 1);
         }
     }
 }

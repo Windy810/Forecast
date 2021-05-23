@@ -22,25 +22,25 @@
                     android:id="@+id/add_city"
                     android:layout_marginLeft="15dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:drawableStart="@drawable/add"
                     android:textColor="#ffffff"
-                    android:layout_width="3dp" />
+                    android:layout_width="0dp" />
                 <TextView
                     android:id="@+id/cityName"
                     android:text="北京市"
                     android:textSize="24sp"
                     android:textColor="#ffffff"
                     android:gravity="center"
-                    android:layout_weight="2"
+                    android:layout_weight="4"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
                 <TextView
                     android:id="@+id/citySet"
                     android:textColor="#ffffff"
                     android:gravity="center"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
             </LinearLayout>
@@ -48,7 +48,7 @@
             <TextView
                 android:text="24 ℃"
                 android:layout_gravity="center"
-                android:id="@+id/temp_max0"
+                android:id="@+id/temp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="50dp"

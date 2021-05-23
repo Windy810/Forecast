@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.windy.forecast.Request.HourlyWeatherForecast;
 import com.windy.forecast.Request.WeeklyWeatherForecast;
 import com.google.gson.Gson;
 import java.text.ParseException;
@@ -29,7 +31,9 @@ import lecho.lib.hellocharts.view.LineChartView;
 
 public class Fragment1 extends Fragment implements View.OnClickListener{
     private View view;
-    private TextView button;
+    private HourlyWeatherForecast hourlyWeatherForecast;
+    private volatile String string_hourly_weather_forcast;
+    private TextView button,cityName,temp;
     private CityOperator cityOperator;
     private TextView day0, day1,day2,day3,day4,day5,day6;
     private TextView date0, date1,date2,date3,date4,date5,date6;
@@ -76,6 +80,8 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
 
     private void bindView(){
         cityOperator = new CityOperator(getContext());
+        cityName =view.findViewById(R.id.cityName);
+        temp = view.findViewById(R.id.temp);
         button = view.findViewById(R.id.add_city);
         button.setOnClickListener(this);
         tv_updata = view.findViewById(R.id.tv_update);
@@ -153,6 +159,9 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
 
     private void draw(){
         try {
+            String degree = "℃";
+            cityName.setText(string_city);
+            temp.setText(hourlyWeatherForecast.getHeWeather6().get(0).getHourly().get(0).getTmp()+degree);
             SimpleDateFormat sd1 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
             SimpleDateFormat sd2 = new SimpleDateFormat("HH:mm");
             Date upd = sd1.parse(weeklyWeatherForecast.getHeWeather6().get(0).getUpdate().getLoc());
@@ -322,6 +331,7 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
                 try {
                     CityOperator cityOperator = new CityOperator(getContext());
                     string_city = cityOperator.getIsSelectCity().toString2();
+                    string_hourly_weather_forcast = GetData.getJson("https://free-api.heweather.com/s6/weather/hourly?location=" + string_city + "&key=2d7b37b322a04de1ab17fca5f2e0f0ea");
                     string_weather_forcast = GetData.getJson("https://free-api.heweather.com/s6/weather/forecast?location="
                             + string_city
                             + "&key=2d7b37b322a04de1ab17fca5f2e0f0ea");
@@ -344,6 +354,7 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
     private void parseData(){
         Gson gson = new Gson();
         weeklyWeatherForecast = gson.fromJson(string_weather_forcast,WeeklyWeatherForecast.class);
+        hourlyWeatherForecast = gson.fromJson(string_hourly_weather_forcast, HourlyWeatherForecast.class);
         if(weeklyWeatherForecast != null)
             draw();
     }
@@ -375,5 +386,13 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
             Intent intent = new Intent(getActivity(), Add_city.class);
             startActivityForResult(intent, 1);
         }
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == 1) {
+            cityName.setText(data.getStringExtra("cityName"));
+        }
+
     }
 }
